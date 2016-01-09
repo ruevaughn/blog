@@ -37,11 +37,11 @@ We are not immediately proud of this solution, however it works. We quickly note
 
 Here is the timing of a randomly generated array with 10,000 numbers ranging from 0 to 100.
 
-![Bubble Sort Timing](/assets/bubble-sort-timing.png)
+![Bubble Sort Timing](/blog/assets/bubble-sort-timing.png)
 
 As you can see, it took roughly 11 seconds to sort. Let compare this to the sort method that comes built into Ruby's Enumerable class
 
-![Bubble Sort Timing](/assets/ruby-sort-timing.png)
+![Bubble Sort Timing](/blog/assets/ruby-sort-timing.png)
 
 Much faster. 
 
@@ -51,7 +51,7 @@ According to wikipedia, we have some options. Insertion sort, quicksort, heapsor
 
 I'm going to go with Merge Sort, because after reading about it, it sounds pretty hopeful that it can be quick if implemented correctly. According to wikipedia: "Merge Sort is an efficient, general-purpose, comparison-based sorting algorithm." Sounds hopeful to me. A merge sort is basically a divide and conquer approach that splits the array into two halves and recursively sorts them and then combines them. In theory it looks like this:
 
-![Merge Sort - From Wikipedia](/assets/merge-sort-example.gif)
+![Merge Sort - From Wikipedia](/blog/assets/merge-sort-example.gif)
 
 Now the challenge of writing a merge sort. It was definitely more difficult then I thought it would be (as was the simple bubble sort) but after a few hours and thanks to this [pluralsight article](http://www.sitepoint.com/sorting-algorithms-ruby/) I ended up with a solution.
 
@@ -100,13 +100,13 @@ p merge_sort(a)
 
 and here is the test so we can compare it to the ruby sort.
 
-![Merge Sort Timing](/assets/merge-sort-timing.png)
+![Merge Sort Timing](/blog/assets/merge-sort-timing.png)
 
 Much faster than the Bubble Sort, but Ruby's sort method is still faster. It makes me curious, other than Ruby Magic, what method is the built in Sort method using?
 
 A quick Google Search yields fast results, according to the [this](http://stackoverflow.com/questions/855773/which-algorithm-does-rubys-sort-method-use) Stack Overflow question, Ruby uses the Quicksort Algorithm. It appears to only downfall to this algorithm is when the array is almost sorted, the complexity becomes n^2. Other than this minor downfall, the Quicksort is a very effective sorting algorithm. Here is what it looks like in theory:
 
-![Quicksort Example - Wikipedia](/assets/quicksort-example.gif)
+![Quicksort Example - Wikipedia](/blog/assets/quicksort-example.gif)
 
 Another thing to note, as a lot of Ruby's source code is in fact written in C, this sort method is no exception. Running this query at the lower level does make it faster than if we were to write an implementation in Ruby, which I will not be doing for this post. You can see this code if you look at the [sort!](http://ruby-doc.org/core-2.2.0/Array.html#method-i-sort-21) method on the ruby-docs
 and click "Toggle Source"
