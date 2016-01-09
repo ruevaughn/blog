@@ -33,7 +33,7 @@ p mysort(a)
 
 We are not immediately proud of this solution, however it works. We quickly note that we are using the [bubble sort](https://en.wikipedia.org/wiki/Bubble_sort) algorithm which works as shown below, but has inherent speed problems which makes it impractical due to its inability to scale. 
 
-![Bubble Sort - From Wikipedia](/assets/bubble-sort-example.gif)
+![Bubble Sort - From Wikipedia]({{ site.url }}/assets/bubble-sort-example.gif)
 
 Here is the timing of a randomly generated array with 10,000 numbers ranging from 0 to 100.
 
