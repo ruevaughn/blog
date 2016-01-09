@@ -7,7 +7,7 @@ categories: jekyll update
 
 Recently I was challenged with the simple task of creating my own custom sort method. Ruby has one built in that works great (which we will see when I post the timing numbers), but because this task wasn't as simple as I orignally imagined I wanted to dive into it. As Ruby programmers we tend to take all the methods that come with Ruby for granted and don't give much thought as to how they work and what it would take to re-create them.
 
-To start, let's look at the quick solution what we originally came up with: (As noted, I did not come up with this by myself)
+To start, let's look at the quick solution what we originally came up with: 
 
 {% highlight ruby %}
 def my_sort(arr)
